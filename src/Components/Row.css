@@ -32,4 +32,10 @@
 .row {
 	margin-left: 20px;
 	color: white;
+
+}
+
+.row h1{
+	font-size: 2em;
+	font-weight: bold;
 }

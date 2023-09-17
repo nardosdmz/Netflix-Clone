@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Footer() {
 	const links = [
@@ -32,30 +33,36 @@ function Footer() {
 		{ linkUrl: "#", linkName: "Contact Us" },
 		{ linkUrl: "#", linkName: "Only on Netflix" },
 	];
+	const [selectedLanguage, setSelectedLanguage] = useState("en");
 
 	const renderListItems = (array) =>
 		array.map((item, index) => (
-			<ul>
-				<li key={index}>
-					<a href={item.linkUrl}>{item.linkName}</a>
-				</li>
-			</ul>
+			<li key={index}>
+				<a href={item.linkUrl}>{item.linkName}</a>
+			</li>
 		));
+
+	const handleLanguageChange = (event) => {
+		setSelectedLanguage(event.target.value);
+	};
 
 	return (
 		<>
 			<div className="border"></div>
-			<div className="Footer">
+			<Container className="Footer">
 				<h4>
 					Questions? Call <u>1-844-505-2993</u>
 				</h4>
-				<div className="Footer__wrapper">
-					<div>{renderListItems(links)}</div>
-					<div>{renderListItems(Services)}</div>
-					<div>{renderListItems(Account)}</div>
+				<div className="Footer__wrapper ">
+					<Row>
+						<Col>{renderListItems(links)}</Col>
+						<Col>{renderListItems(Services)}</Col>
+						<Col>{renderListItems(Account)}</Col>
+					</Row>
 				</div>
+
 				<div className="Footer__lang">
-					<select onChange="changeLanguage">
+					<select onChange={handleLanguageChange} value={selectedLanguage}>
 						<option value="en">🌐︎ English</option>
 						<option value="es">Spanish</option>
 					</select>
@@ -63,9 +70,9 @@ function Footer() {
 				<br />
 				<br />
 				<center className="build_by">
-					<h2>Made By: Nardos Moges</h2>
+					<h2>Build By: Nardos Moges</h2>
 				</center>
-			</div>
+			</Container>
 		</>
 	);
 }

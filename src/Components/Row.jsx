@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Row.css";
-import axios from "../axios"; // instance yalnew in axios
+import axios from "../axios"; // instance in axios
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
 

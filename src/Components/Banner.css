@@ -7,11 +7,10 @@
 .banner__contents {
 	margin-left: 30px;
 	padding-top: 140px;
-	height: 190px;
+	height: 330px;
 }
 
 .banner__title {
-	font-size: 3 rem;
 	font-weight: 800;
 	padding-bottom: 0.3rem;
 }
@@ -23,9 +22,13 @@
 	font-size: 0.8rem;
 	max-width: 360px;
 	height: 80px;
+	font-weight: bold;
 }
 
 .banner__button {
+	
+	line-height: normal;
+	font-size: small;
 	cursor: pointer;
 	color: #fff;
 	outline: none;

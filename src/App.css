@@ -1,13 +1,11 @@
 * {
 	margin: 0;
-	/* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
 }
 .App {
 	background-color: #111;
 	overflow-x: hidden;
 }
 body {
-	/* margin: 0; */
 	font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
 		"Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
